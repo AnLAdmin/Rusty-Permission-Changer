@@ -13,6 +13,12 @@ A high-performance Rust implementation of the file permission changer utility. T
 - **Comprehensive Logging**: Detailed audit trail of all operations
 - **High Performance**: 5-10x faster than the Python version
 
+## Contributing
+This is AI generated and untested. Not open for contribution right now.
+
+## Thanks
+Based on the code of https://github.com/TSTP-Enterprises/TSTP-Permission_Changer.
+
 ## Building
 
 ### Prerequisites
@@ -24,7 +30,7 @@ A high-performance Rust implementation of the file permission changer utility. T
 
 ### Build from Source
 
-```bash
+`bash
 git clone https://github.com/AnLAdmin/Rusty-Permission-Changer.git
 cd Rusty-Permission-Changer
-cargo build --release
+cargo build --release`
