@@ -30,7 +30,26 @@ Based on the code of https://github.com/TSTP-Enterprises/TSTP-Permission_Changer
 
 ### Build from Source
 
-`bash
+```bash
 git clone https://github.com/AnLAdmin/Rusty-Permission-Changer.git
 cd Rusty-Permission-Changer
-cargo build --release`
+cargo build --release
+```
+
+## Architecture
+* GUI Module: FLTK-based user interface (src/gui.rs)
+* Permissions Module: Low-level OS permission handling (src/permissions.rs)
+* Database Module: SQLite change tracking (src/database.rs)
+* Worker Module: Threaded operations for performance (src/worker.rs)
+* Utils Module: Helper functions and logging (src/utils.rs)
+
+## Database
+``` SQL
+CREATE TABLE ownership_changes (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    path TEXT NOT NULL,
+    original_owner TEXT NOT NULL,
+    current_owner TEXT NOT NULL,
+    operation_time DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+```
