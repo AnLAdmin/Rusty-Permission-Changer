@@ -4,7 +4,7 @@ A high-performance Rust implementation of the file permission changer utility. T
 
 ## Features
 
-- **Cross-platform Support**: Works on Windows, Linux, and macOS
+- **Platform Support**: Windows
 - **Bulk Operations**: Change ownership of multiple files and folders at once
 - **Graphical Interface**: User-friendly FLTK-based GUI
 - **Change Tracking**: SQLite database records all ownership changes
