@@ -1,0 +1,30 @@
+[package]
+name = "rusty-permission-changer"
+version = "1.0.0"
+edition = "2021"
+authors = ["The Solutions To Problems, LLC"]
+description = "A high-performance Rust tool to help you make bulk changes to file permissions that you select in Windows OS."
+license = "MIT"
+repository = "https://github.com/AnLAdmin/Rusty-Permission-Changer"
+
+[dependencies]
+fltk = "1.4"
+rusqlite = { version = "0.31", features = ["bundled"] }
+log = "0.4"
+env_logger = "0.11"
+anyhow = "1.0"
+thiserror = "1.0"
+chrono = "0.4"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+[target.'cfg(windows)'.dependencies]
+winapi = { version = "0.3", features = ["winbase", "winnt", "fileapi", "securitybaseapi"] }
+
+[target.'cfg(unix)'.dependencies]
+nix = { version = "0.27", features = ["user"] }
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
