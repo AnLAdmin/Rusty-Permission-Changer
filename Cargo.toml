@@ -1,7 +1,7 @@
 [package]
 name = "rusty-permission-changer"
 version = "0.0.1"
-edition = "2026"
+edition = "2024"
 authors = ["AnLAdmin"]
 description = "A high-performance Rust tool to help you make bulk changes to file permissions that you select in Windows OS."
 license = "GPL-3.0"
